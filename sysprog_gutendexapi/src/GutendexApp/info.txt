@@ -1,0 +1,9 @@
+//Molicu installirati: 
+
+dotnet add package System.Reactive
+dotnet add package Akka
+dotnet add package Microsoft.ML
+
+//opciono: 
+dotnet add package Carter
+dotnet add package Microsoft.ML.Transforms
