@@ -7,3 +7,13 @@ dotnet add package Microsoft.ML
 //opciono: 
 dotnet add package Carter
 dotnet add package Microsoft.ML.Transforms
+
+Web Server prima zahteve od klijenta
+Taj upit salje CoordinateActor-u, kako bi se kreirao aktor za tog autora ako ne postoji
+Upit se takodje salje i RxService-u kako bi on komunicirao sa API-jem
+
+znaci korisnik ce samo kroz rutu da upise naziv autora cije knjige trazi
+to ce da primi web server i da posaljem RxService-u 
+service salje upit u formatu bookd/?search=autor
+odgovor je u formatu ApiResponse
+

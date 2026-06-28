@@ -1,6 +1,29 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using System.Threading.Tasks;
+using GutendexApp;
+using GutendexApp.Models;
+using GutendexApp.Services;
+using GutendexApp.Web;
 
-app.MapGet("/", () => "Hello World!");
+namespace GutendexApp
+{
+    public class Program
+    {
+    static async Task Main(string[] args)
+    {
+        Console.WriteLine("===GUTENDEX SERVER STARTUP ===");
+        try
+        {
 
-app.Run();
+            Server server = new Server();
+            await server.StartAsync();
+           
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"KRITIČNA GREŠKA PRI POKRETANJU: {ex.Message}");
+
+        }
+        Console.WriteLine("Aplikacija je ugašena.");
+    }
+    }
+}
