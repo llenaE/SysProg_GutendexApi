@@ -8,6 +8,8 @@ dotnet add package Microsoft.ML
 dotnet add package Carter
 dotnet add package Microsoft.ML.Transforms
 
+dotnet add package Microsoft.ML.LDA //i ovo sam instalirala ali na kraju nisam uspela da sredim TopicModelingService
+
 Web Server prima zahteve od klijenta
 Taj upit salje CoordinateActor-u, kako bi se kreirao aktor za tog autora ako ne postoji
 Upit se takodje salje i RxService-u kako bi on komunicirao sa API-jem

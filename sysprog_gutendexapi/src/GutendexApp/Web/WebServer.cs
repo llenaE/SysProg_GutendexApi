@@ -97,7 +97,7 @@ public class Server
             //saljemo koordinatoru
             //cekamo (asinhrono) TopicResult odgovor od AuthorActor-a.
             //cekamo maks 5s 
-            var result = await _authCoordinator.Ask<TopicResult>(requestMsg, TimeSpan.FromSeconds(5));
+            var result = await _authCoordinator.Ask<TopicResult>(requestMsg, TimeSpan.FromSeconds(60));
 
             //vracamo klijentu odgovor
             RespondWithJson(context, result);
@@ -114,10 +114,10 @@ public class Server
         finally
         {
             //realno ove respond metode nam vec zatvaraju stream ne znam da li je ovde potrebno
-            if (context.Response.OutputStream.CanWrite)
-            {
-                context.Response.OutputStream.Close();
-            }
+            // if (context.Response.OutputStream.CanWrite)
+            // {
+            //     context.Response.OutputStream.Close();
+            // }
         }
 
     }
@@ -156,7 +156,7 @@ public class Server
         }
         finally
         {
-            context.Response.OutputStream.Close();
+            // context.Response.OutputStream.Close();
             context.Response.Close();
         }
     }
@@ -164,6 +164,7 @@ public class Server
 
     private void RespondWithText(HttpListenerContext context, string text, int statusCode = 200)
     {
+        
         try
         {
             var response = context.Response;
@@ -177,7 +178,7 @@ public class Server
         }
         finally
         {
-            context.Response.OutputStream.Close();
+            // context.Response.OutputStream.Close();
             context.Response.Close();
         }
     }
