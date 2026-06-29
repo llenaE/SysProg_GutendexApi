@@ -26,3 +26,7 @@ Ovako:
 TopicModelingService donekle kapirak kako funkcionise trenutno se vracaju hardkodirane stvari
 Samo da vidimo da sve radi , tu sam morala da dodam novu klasu koja je samo DTO jer ml zahteva neku klasu da bi moglo da mapira na kolone
  
+Pitanja: 
+Skripta/test ?
+Gde je zapravo periodicnost za rx? 
+Aktori da li treba da se ogranice? 
