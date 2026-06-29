@@ -19,3 +19,8 @@ to ce da primi web server i da posaljem RxService-u
 service salje upit u formatu bookd/?search=autor
 odgovor je u formatu ApiResponse
 
+
+Ovako: 
+TopicModelingService donekle kapirak kako funkcionise trenutno se vracaju hardkodirane stvari
+Samo da vidimo da sve radi , tu sam morala da dodam novu klasu koja je samo DTO jer ml zahteva neku klasu da bi moglo da mapira na kolone
+ 
