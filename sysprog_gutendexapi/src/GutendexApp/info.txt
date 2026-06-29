@@ -12,6 +12,8 @@ Web Server prima zahteve od klijenta
 Taj upit salje CoordinateActor-u, kako bi se kreirao aktor za tog autora ako ne postoji
 Upit se takodje salje i RxService-u kako bi on komunicirao sa API-jem
 
+Upit se RxService-u salje iz actora mislim ne iz web server-a -j 
+
 znaci korisnik ce samo kroz rutu da upise naziv autora cije knjige trazi
 to ce da primi web server i da posaljem RxService-u 
 service salje upit u formatu bookd/?search=autor
